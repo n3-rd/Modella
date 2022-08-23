@@ -15,7 +15,9 @@
   "dependencies": {
     "@studio-freight/lenis": "^0.1.14",
     "autoprefixer": "^10.4.8",
+    "fontfaceobserver": "^2.3.0",
     "gsap": "^3.11.0",
+    "imagesloaded": "^5.0.0",
     "kursor": "^0.1.6",
     "postcss": "^8.4.16",
     "splitting": "^1.0.6"

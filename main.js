@@ -4,6 +4,7 @@ import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
 import Lenis from '@studio-freight/lenis'
+import imagesLoaded from 'imagesloaded';
 // new kursor({
 //   type: 1
 // })
@@ -62,12 +63,14 @@ const mainReveal = ()=>{
 const preloadBody = ()=>{
   document.body.style.opacity = 1;
 }
-document.body.style.opacity = 0;
-document.addEventListener("DOMContentLoaded", ()=>{
-  preloadBody()
-  preload()
-  mainReveal();
-})
+// document.body.style.opacity = 0;
+imagesLoaded( document.querySelector('body'), function( instance ) {
+  console.log('all images are loaded');
+    preloadBody()
+    preload()
+    mainReveal();
+  })
+
 
 // const extLink = document.querySelectorAll('.ext-link');
 // extLink.forEach(link => {
