@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  overflow-x: hidden;
+  font-family: "sora";
+}
+
+@font-face {
+  font-family: "bigilla";
+  src: url(/fonts/Bigilla.otf);
+}
+@font-face {
+  font-family: "bigilla-bold";
+  src: url(/fonts/Bigilla-Bold.otf);
+}
+@font-face {
+  font-family: "sora";
+  src: url(/fonts/Sora-Regular.ttf);
+}
+.font-display {
+  font-family: "bigilla";
+}
+
+.font-display-bold {
+  font-family: "bigilla-bold";
+  font-weight: bold;
+}
+
+.font-sans {
+  font-family: "sora";
+}
+
+.line {
+  height: 8rem;
+  overflow: hidden;
+}
+
+.image-hover {
+  transition: all 1s ease-in-out;
+}
+.image-hover:hover {
+  transform: scale(1.2) !important;
+}
+
+.section-2 {
+  justify-content: center;
+}
+
+.main-shape {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.marquee {
+  --gap:1rem;
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  -webkit-animation: scroll 10s linear infinite;
+          animation: scroll 10s linear infinite;
+}
+.marquee__content li {
+  list-style-type: none;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}/*# sourceMappingURL=style.css.map */
